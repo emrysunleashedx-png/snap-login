@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: snap-login
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /
+    envVars:
+      - key: TG_TOKEN
+        sync: false
+      - key: TG_CHAT
+        sync: false

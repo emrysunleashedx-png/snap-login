@@ -1,0 +1,4 @@
+snap-data
+*.log
+*.pid
+*.sh
