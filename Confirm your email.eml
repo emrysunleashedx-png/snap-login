@@ -1,0 +1,603 @@
+Delivered-To: olamiposi1073@gmail.com
+Received: by 2002:a05:6022:5204:b0:119:ba81:7c9e with SMTP id w4csp794247law;
+        Sat, 7 Nov 2026 01:28:14 -0800 (PST)
+X-Received: by 2002:a05:6214:acb:b0:91e:85d8:f3ee with SMTP id 6a1803df08f44-91ebd1594a3mr21086906d6.3.1794043694538;
+        Sat, 07 Nov 2026 01:28:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1794043694; cv=none;
+        d=google.com; s=arc-20260327;
+        b=kivaTK4u+vAr5DWQBx6L1bSmOwdqyUxO1LPVy69+8cYtJ4ivRwzXZELVpM01lUG8vs
+         VDEG/Zo6gw5DDWXWPuam5JDxJ6PHRK0L5dG6lqME5GNCJLHLSOjMp3v6W9tFv8f0UUzD
+         Yz8FU/MywUdA8/0NKdmaXJDv1h0O3ekyL/hPT7Gib9/oW3kFOUi5Jmi/RbZHIPV0KZ2o
+         9h/e3mcMGkXAOlxiGb1yvX3G7jPAXOp8BaVQP2wfdqPcGE9Hb7SWB4aa2yFA0jsC+JHt
+         5XWr3N3SDJb3i5riV8M81wDA0y/Gi15Cgbq0pP9ol+I157k9KNyK6v/XQs55CmES6QlL
+         MnyA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:dkim-signature:dkim-signature;
+        bh=TTPqC/Rpb9JBtVXt+XmkhltW9LYwTyCs8W2ggMVcNPA=;
+        fh=oCarbj98JSqYTO5BMo/xdAxcXyjw6q9RRhPBKSTHJG8=;
+        b=lUaHeeJVjdq1f65BMH0hCnEmADy27JyARSaKuk9KR8J0iUyD0BzgEGrC0eEk054tsB
+         5/VnVKiCR95+5t3UIgcUC/0uS7r51RZVbxEl1oFo/srAkAP730mlb+EcteEoYshH+kzw
+         obKWVCfkuBJ/XH3pcasYWSZS7MN1jj9asYIJhPJ9/tDYNZ7yGj+DAfrJlNUnao0vJ0fx
+         ywBZBhqFNp+jKCLA5EY5TyOw8RKqlNgXJ6c2lcO8Wkc3WX5//TvRBTuw7OYXJgLwjrFH
+         zaW50IJ6elseHR7SlomsYrmt4diXGxT+h6MnXkpigpinnAxy8jPJm1IXMIbXhLJRYttS
+         h9ig==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@verify.snapchat.com header.s=ghws63ldajaz6chnza2mqn4lklvt5uij header.b=AxlV26Kl;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=WkNiWXOr;
+       spf=pass (google.com: domain of 010001a1b5564bd7-2171cdce-2b01-4625-8b6c-09114586a8a5-000000@mail.verify.snapchat.com designates 54.240.127.155 as permitted sender) smtp.mailfrom=010001a1b5564bd7-2171cdce-2b01-4625-8b6c-09114586a8a5-000000@mail.verify.snapchat.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=verify.snapchat.com
+Return-Path: <010001a1b5564bd7-2171cdce-2b01-4625-8b6c-09114586a8a5-000000@mail.verify.snapchat.com>
+Received: from a127-155.smtp-out.amazonses.com (a127-155.smtp-out.amazonses.com. [54.240.127.155])
+        by mx.google.com with ESMTPS id 6a1803df08f44-91ea6945970si54793636d6.145.2026.11.07.01.28.14
+        for <olamiposi1073@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 07 Nov 2026 01:28:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of 010001a1b5564bd7-2171cdce-2b01-4625-8b6c-09114586a8a5-000000@mail.verify.snapchat.com designates 54.240.127.155 as permitted sender) client-ip=54.240.127.155;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@verify.snapchat.com header.s=ghws63ldajaz6chnza2mqn4lklvt5uij header.b=AxlV26Kl;
+       dkim=pass header.i=@amazonses.com header.s=224i4yxa5dv7c2xz3womw6peuasteono header.b=WkNiWXOr;
+       spf=pass (google.com: domain of 010001a1b5564bd7-2171cdce-2b01-4625-8b6c-09114586a8a5-000000@mail.verify.snapchat.com designates 54.240.127.155 as permitted sender) smtp.mailfrom=010001a1b5564bd7-2171cdce-2b01-4625-8b6c-09114586a8a5-000000@mail.verify.snapchat.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=verify.snapchat.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ghws63ldajaz6chnza2mqn4lklvt5uij; d=verify.snapchat.com;
+	t=1794043694;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=7IAZP9d1o9F/uFHG4g2uui0fL6uYg7KS2lrLHGKFVDw=;
+	b=AxlV26KlJcYj/07nLyqJQkX6Nsq4WqP79RCNNcaDIAYpkzY2BGDhFvQOmyoe4096
+	r9jr3Dmg3cFtSpMMZHlSJSgUcVzpw5tg1zOnPv/bXNoEMXAYWOsQrje0I4Q2zTeawFF
+	ZV93/JF8uDbvIbcnggsKW+4VaeoUEaaCYYjrer4RQ7wF7+SsLd4cpfLjHjwcWt4oscH
+	5cEYhVnXiENL7pIW183lh/QI4SQr6qVjr6cw2Yzk/RXRmI5XU2QxuFhH0xO9PZAHtDF
+	5ACy4o4CU07/4ICuR7DISj/gEvP7d7fC9wG/4Nn1GVkZt1MFVIUJgOIAersr2o1ay9w
+	MyEt8ree0A==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=224i4yxa5dv7c2xz3womw6peuasteono; d=amazonses.com; t=1794043694;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=7IAZP9d1o9F/uFHG4g2uui0fL6uYg7KS2lrLHGKFVDw=;
+	b=WkNiWXOrWctZO3c5tMnVkJIMavA3Xufl3i9awYe49cuYUNpTWV4dNfeNKidmXczE
+	GCSixjD7rUHwBF+x90p7r/jXJdKdNW3gE8CruPS4YvjVS7NOTpcjqK7yLlwgVB/NWtg
+	zhRAQyqui9alDE3m3YG3Q7K8WE8jpaqKGzBeWJsU=
+From: Team Snapchat <verification@verify.snapchat.com>
+To: olamiposi1073@gmail.com
+Subject: Confirm your email
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <010001a1b5564bd7-2171cdce-2b01-4625-8b6c-09114586a8a5-000000@email.amazonses.com>
+Date: Sat, 7 Nov 2026 09:28:14 +0000
+Feedback-ID: ::1.us-east-1.4Grjx1zb3TSAwnrynKu9c3eObSHmGjUCdT5cN8GaAaw=:AmazonSES
+X-SES-Outgoing: 2026.11.07-54.240.127.155
+
+<!doctype html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce">
+<head><title></title><!--[if !mso]><!-- --><meta http-equiv=3D"X-UA-Compati=
+ble" content=3D"IE=3Dedge"><!--<![endif]--><meta http-equiv=3D"Content-Type=
+" content=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" content=3D=
+"width=3Ddevice-width,initial-scale=3D1"><style type=3D"text/css">#outlook =
+a { padding:0; }           body, .body { margin:0;padding:0;-webkit-text-si=
+ze-adjust:100%;-ms-text-size-adjust:100%; }           table { border-spacin=
+g:0;}           img { border:0;height:auto;line-height:100%; outline:none;t=
+ext-decoration:none;-ms-interpolation-mode:bicubic; }           p { display=
+:block;margin:13px 0; }</style><!--[if mso]>                    <xml>      =
+                <o:OfficeDocumentSettings>                          <o:Allo=
+wPNG/>                          <o:PixelsPerInch>96</o:PixelsPerInch>      =
+                </o:OfficeDocumentSettings>                    </xml>      =
+                  <style type=3D"text/css">             table { border-coll=
+apse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; }             .mj-=
+outlook-group-fix { width:100% !important; }             .mso-button-dark-m=
+ode a {background: transparent !important;}           </style>             =
+     <![endif]--><!--[if !mso]><!--><link href=3D"https://client-data.knak.=
+io/production/company_data/657754d2cc4c9/custom-fonts/65958f366b32e/fonts.c=
+ss" rel=3D"stylesheet" type=3D"text/css"><link href=3D"https://assets.knak.=
+io/custom-fonts/Avenir/Avenir.css" rel=3D"stylesheet" type=3D"text/css"><st=
+yle type=3D"text/css">@import url(https://client-data.knak.io/production/co=
+mpany_data/657754d2cc4c9/custom-fonts/65958f366b32e/fonts.css);  @import ur=
+l(https://assets.knak.io/custom-fonts/Avenir/Avenir.css);</style><!--<![end=
+if]--><style type=3D"text/css">@media only screen and (min-width:620px) {  =
+       .mj-column-per-100 { width:100% !important; max-width: 100%; } .mj-c=
+olumn-per-2 { width:2% !important; max-width: 2%; } .mj-column-per-21 { wid=
+th:21% !important; max-width: 21%; } .mj-column-per-45 { width:45% !importa=
+nt; max-width: 45%; } .mj-column-per-30 { width:30% !important; max-width: =
+30%; }       }</style><style type=3D"text/css">u ~ div .img-container img +=
+ div { display: none } .links-0068A5-underline a { color: #0068A5; text-dec=
+oration: underline; } #body #main [x-apple-data-detectors-type] {          =
+  color: inherit !important;            -webkit-text-decoration-color: inhe=
+rit !important;            text-decoration: inherit !important;           f=
+ont-weight: inherit !important;          } .links-9A9FA7 a { color: #9A9FA7=
+; text-decoration: none; }                                         @media o=
+nly screen and (min-width:620px) {                         .height-30px { h=
+eight: 30px !important} .line-height-30px { line-height: 30px !important} .=
+font-size-34px { font-size: 34px !important} .font-size-16px { font-size: 1=
+6px !important} .height-40px { height: 40px !important} .line-height-40px {=
+ line-height: 40px !important} .padding-0px-0px-0px-0px { padding: 0px 0px =
+0px 0px !important} .max-width-90px { max-width: 90px !important} .font-siz=
+e-12px { font-size: 12px !important} .padding-10px-25px-10px-5px { padding:=
+ 10px 25px 10px 5px !important} .height-20px { height: 20px !important} .li=
+ne-height-20px { line-height: 20px !important} .padding-25px-0px-0px-0px { =
+padding: 25px 0px 0px 0px !important} .height-15px { height: 15px !importan=
+t} .line-height-15px { line-height: 15px !important}             }</style><=
+style type=3D"text/css">p{margin: 0 0;}ul{display: block;}sup, sub{line-hei=
+ght:0;}body a{text-decoration: none; color: #0068A5;}.image-highlight{trans=
+ition: 0.3s;}.image-highlight:hover{filter: brightness(1.2);}.button-highli=
+ght{transition: 0.3s;}.button-highlight:hover{filter: brightness(1.5);}@med=
+ia only screen and (min-width: 620px) { .hide-on-mobile{display:block !impo=
+rtant;}.hide-on-desktop{display:none !important;} }.hide-on-desktop{display=
+:block;}.hide-on-mobile{display:none;}</style><!--[if mso]>             <st=
+yle>                 .hide-on-mobile {display:block !important}            =
+ </style>         <![endif]--><!--[if mso]>                 <style>        =
+                      .mso-font-size-34px { font-size: 34px !important; } .=
+mso-font-size-16px { font-size: 16px !important; } .mso-font-size-12px { fo=
+nt-size: 12px !important; }                 </style>             <![endif]-=
+-><!--[if gte mso 16]>                 <style>                     .mso-tex=
+t-white a { mso-style-textfill-type: gradient; mso-style-textfill-fill-grad=
+ientfill-stoplist: "0 \#FFFFFF 0 100000\,100000 \#FFFFFF 0 100000"; color: =
+#000000 !important; }                  </style>             <![endif]--><st=
+yle>[class~=3D"x_body"] { width: 99.9% }</style>
+</head>
+<body style=3D"word-spacing:normal;background-color:#FFFFFF;" class=3D"body=
+" id=3D"body"><div style=3D"background-color:#FFFFFF;background-position:ce=
+nter center;background-size:auto;background-repeat:repeat;" id=3D"main"><!-=
+-[if mso]>
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">=
+<![endif]--><!--[if mso]>
+    <tr>
+        <td><![endif]-->
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"background-color:#FFFFFF;width:100%;" clas=
+s=3D"section">
+        <tr>
+            <td align=3D"center"><!--[if mso | IE]>
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=3D"=
+600" >
+                    <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;"><![endif]--><div style=3D"background:#FFFC00;backgro=
+und-color:#FFFC00;Margin:0px auto;max-width:600px;">
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background-color:#FFFC00;w=
+idth:100%;">
+                        <tr>
+                            <td style=3D"font-size:0px;padding:0;text-align=
+:center;vertical-align:top;" class=3D"block-grid"><!--[if mso | IE]>
+                                <table role=3D"presentation" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0">
+                                    <tr>
+                                        <td style=3D"vertical-align:top;wid=
+th:600px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;">
+                                    <table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"background-color:#FFFC00;bo=
+rder-radius:0px;vertical-align:top;" width=3D"100%">
+                                        <tr>
+                                            <td class=3D"img-container" sty=
+le=3D"font-size:0px;padding:0px 0px 0px 0px;word-break:break-word;text-alig=
+n:center;"><div style=3D"margin:0 auto;"><img alt=3D"Snapchat Header" heigh=
+t=3D"auto" width=3D"600" src=3D"https://image.email.snapchat.com/lib/fe2c11=
+7371640474721675/m/1/155d97ca-e2e6-4c22-828b-e463ed68e4bd.png" style=3D"bor=
+der:none;border-radius:0px 0px 0px 0px;outline:none;text-decoration:none;he=
+ight:auto;width:100%;font-size:13px;display:block;"></div>
+                                            </td>
+                                        </tr>
+                                    </table></div><!--[if mso | IE]>
+                                </td>
+                                </tr>
+                                </table><![endif]-->
+                            </td>
+                        </tr>
+                    </table></div><!--[if mso | IE]>
+                </td>
+                </tr>
+                </table><![endif]-->
+            </td>
+        </tr>
+    </table><!--[if mso]>
+    </td>
+    </tr><![endif]-->
+    <!--[if mso]>
+    <tr>
+        <td><![endif]-->
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"background-color:#FFFFFF;width:100%;" clas=
+s=3D"section">
+        <tr>
+            <td align=3D"center"><!--[if mso | IE]>
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=3D"=
+600" >
+                    <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;"><![endif]--><div style=3D"background:#FFFFFF;backgro=
+und-color:#FFFFFF;Margin:0px auto;max-width:600px;">
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background-color:#FFFFFF;w=
+idth:100%;">
+                        <tr>
+                            <td style=3D"font-size:0px;padding:0px;text-ali=
+gn:center;vertical-align:top;" class=3D"block-grid"><!--[if mso | IE]>
+                                <table role=3D"presentation" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0">
+                                    <tr>
+                                        <td style=3D"vertical-align:top;wid=
+th:600px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;">
+                                    <table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"border-radius:0px;vertical-=
+align:top;" width=3D"100%">
+                                        <tr>
+                                            <td style=3D"font-size:0px;padd=
+ing:0 0 0 0;word-break:break-word;"><div style=3D"line-height:20px;height:2=
+0px;mso-line-height-alt:30px;" class=3D"height-30px line-height-30px">&nbsp=
+;</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"text-container" st=
+yle=3D"font-size:0px;padding:10px 25px 10px 25px;word-break:break-word;text=
+-align:center;"><div class=3D"links-0068A5-underline"><div style=3D"font-fa=
+mily:Avenir,Helvetica,sans-serif,Arial;font-size:25px;font-weight:400;lette=
+r-spacing:none;line-height:1.2;text-align:center;mso-line-height-alt:2.563e=
+m;color:#000000;" class=3D"mso-font-size-34px font-size-34px"><p style=3D"m=
+argin: 0 0;"><strong>Confirm your email</strong></p></div></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"text-container" st=
+yle=3D"font-size:0px;padding:10px 30px 10px 30px;word-break:break-word;text=
+-align:left;"><div class=3D"links-0068A5-underline"><div style=3D"font-fami=
+ly:Avenir,Helvetica,sans-serif,Arial;font-size:11px;letter-spacing:none;lin=
+e-height:1.8;text-align:left;mso-line-height-alt:1.813em;color:#000000;" cl=
+ass=3D"mso-font-size-16px font-size-16px"><p style=3D"margin: 0 0;">Hi <spa=
+n style=3D"font-family:AvenirNext-DemiBold,'Droid Sans monospace',Roboto,Ar=
+ial,sans-serif;font-weight:bold;">user51391075</span>,</p><p style=3D"margi=
+n: 0 0;">&nbsp;</p><p style=3D"margin: 0 0;">Before you get started, it=E2=
+=80=99s a good idea to confirm your email address. Doing so helps improve a=
+ccount security, and could help you recover your account in the event you f=
+orget your password!</p></div></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style=3D"font-size:0px;padd=
+ing:0 0 0 0;word-break:break-word;"><div style=3D"line-height:10px;height:1=
+0px;mso-line-height-alt:40px;" class=3D"height-40px line-height-40px">&nbsp=
+;</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign=3D"middle" class=3D"=
+button-highlight hide-on-mobile button-container" style=3D"transition: 0.3s=
+; display: none; font-size: 0px; padding: 10px 25px 10px 25px; word-break: =
+break-word; text-align: center;" align=3D"center"><div><!--[if mso]>
+                                                <table width=3D"100%" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"borde=
+r-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:=
+0pt;">
+                                                    <tr>
+                                                        <td align=3D"center=
+" class=3D"mso-button-dark-mode"><a:roundrect xmlns:a=3D"urn:schemas-micros=
+oft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"http=
+s://accounts.snapchat.com/accounts/confirm_email?n=3DqY_xwybgRaSbC_OnOzV4Yw=
+&source=3Dwelcome" fillcolor=3D"#000000" arcsize=3D"73%" style=3D"v-text-an=
+chor:middle;width:392.25pt;height:61.5pt;" strokecolor=3D"#FFFFFF" strokewe=
+ight=3D"0.75pt" ><w:anchorlock/><a:textbox inset=3D"0,0,0,0"><center style=
+=3D"color:#ffffff; font-family:sans-serif, Arial; font-size:16px" class=3D"=
+mso-text-white"><![endif]--> <a href=3D"https://accounts.snapchat.com/accou=
+nts/confirm_email?n=3DqY_xwybgRaSbC_OnOzV4Yw&source=3Dwelcome" style=3D"dis=
+play: inline-block; width: 95%; background: #000000; color: #FFFFFF; font-f=
+amily: 'Graphik', Arial, sans-serif; font-size: 20px; font-weight: 700; lin=
+e-height: 1; margin: 0; text-align: center; text-decoration: none; text-tra=
+nsform: none; padding: 30px 0px 30px 0px; mso-padding-alt: 0px; border-radi=
+us: 60px; border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF; =
+border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; mso-border=
+-alt: none; box-sizing: border-box;" target=3D"_blank" width=3D"523">Confir=
+m Email </a><!--[if mso]></center></a:textbox></a:roundrect>
+                                                </td>
+                                                </tr>
+                                                </table><![endif]--></div>
+                                            </td>
+                                        </tr><!--[if !mso]><!-->
+                                        <tr>
+                                            <td valign=3D"middle" class=3D"=
+button-highlight hide-on-desktop button-container" style=3D"transition: 0.3=
+s; display: block; font-size: 0px; padding: 10px 25px 10px 25px; word-break=
+: break-word; text-align: center;" align=3D"center"><div><!--[if mso]>
+                                                <table width=3D"100%" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"borde=
+r-spacing:0;border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:=
+0pt;">
+                                                    <tr>
+                                                        <td align=3D"center=
+" class=3D"mso-button-dark-mode"><a:roundrect xmlns:a=3D"urn:schemas-micros=
+oft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" href=3D"http=
+s://accounts.snapchat.com/accounts/confirm_email?n=3DqY_xwybgRaSbC_OnOzV4Yw=
+&source=3Dwelcome" fillcolor=3D"#000000" arcsize=3D"77%" style=3D"v-text-an=
+chor:middle;width:392.25pt;height:58.5pt;" strokecolor=3D"#FFFFFF" strokewe=
+ight=3D"0.75pt" ><w:anchorlock/><a:textbox inset=3D"0,0,0,0"><center style=
+=3D"color:#ffffff; font-family:sans-serif, Arial; font-size:16px" class=3D"=
+mso-text-white"><![endif]--> <a href=3D"https://accounts.snapchat.com/accou=
+nts/confirm_email?n=3DqY_xwybgRaSbC_OnOzV4Yw&source=3Dwelcome" style=3D"dis=
+play: inline-block; width: 95%; background: #000000; color: #FFFFFF; font-f=
+amily: 'Graphik', Arial, sans-serif; font-size: 15px; font-weight: 700; lin=
+e-height: 1; margin: 0; text-align: center; text-decoration: none; text-tra=
+nsform: none; padding: 15px 0px 15px 0px; mso-padding-alt: 0px; border-radi=
+us: 60px; border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF; =
+border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; mso-border=
+-alt: none; box-sizing: border-box;" target=3D"_blank" width=3D"523">Confir=
+m Email </a><!--[if mso]></center></a:textbox></a:roundrect>
+                                                </td>
+                                                </tr>
+                                                </table><![endif]--></div>
+                                            </td>
+                                        </tr><!--<![endif]-->
+                                        <tr>
+                                            <td style=3D"font-size:0px;padd=
+ing:0 0 0 0;word-break:break-word;"><div style=3D"line-height:10px;height:1=
+0px;mso-line-height-alt:40px;" class=3D"height-40px line-height-40px">&nbsp=
+;</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"text-container" st=
+yle=3D"font-size:0px;padding:10px 30px 10px 30px;word-break:break-word;text=
+-align:left;"><div class=3D"links-0068A5-underline"><div style=3D"font-fami=
+ly:Avenir,Helvetica,sans-serif,Arial;font-size:11px;letter-spacing:none;lin=
+e-height:1.8;text-align:left;mso-line-height-alt:1.813em;color:#000000;" cl=
+ass=3D"mso-font-size-16px font-size-16px"><p style=3D"margin: 0 0;">If this=
+ is not your Snapchat account or you did not sign up for Snapchat, please&n=
+bsp;<a title=3D"here" href=3D"https://accounts.snapchat.com/accounts/confir=
+m_email?notMyAccount=3Dtrue&n=3DqY_xwybgRaSbC_OnOzV4Yw&source=3Dwelcome" ta=
+rget=3D"_blank" rel=3D"noopener" style=3D"color: rgb(0, 104, 165); text-dec=
+oration: underline;">go here</a> to remove your email address from this acc=
+ount.</p></div></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style=3D"font-size:0px;padd=
+ing:0 0 0 0;word-break:break-word;"><div style=3D"line-height:20px;height:2=
+0px;mso-line-height-alt:40px;" class=3D"height-40px line-height-40px">&nbsp=
+;</div>
+                                            </td>
+                                        </tr>
+                                    </table></div><!--[if mso | IE]>
+                                </td>
+                                </tr>
+                                </table><![endif]-->
+                            </td>
+                        </tr>
+                    </table></div><!--[if mso | IE]>
+                </td>
+                </tr>
+                </table><![endif]-->
+            </td>
+        </tr>
+    </table><!--[if mso]>
+    </td>
+    </tr><![endif]-->
+    <!--[if mso]>
+    <tr>
+        <td><![endif]-->
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"background-color:#FFFFFF;width:100%;" clas=
+s=3D"section">
+        <tr>
+            <td align=3D"center"><!--[if mso | IE]>
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=3D"=
+600" >
+                    <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;"><![endif]--><div style=3D"background:#F8F8F8;backgro=
+und-color:#F8F8F8;Margin:0px auto;max-width:600px;">
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background-color:#F8F8F8;w=
+idth:100%;">
+                        <tr>
+                            <td style=3D"font-size:0px;padding:0px;text-ali=
+gn:center;vertical-align:top;" class=3D"block-grid"><!--[if mso | IE]>
+                                <table role=3D"presentation" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0">
+                                    <tr>
+                                        <td style=3D"vertical-align:top;wid=
+th:600px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;">
+                                    <table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"border-radius:0px;vertical-=
+align:top;" width=3D"100%">
+                                        <tr>
+                                            <td style=3D"font-size:0px;padd=
+ing:0 0 0 0;word-break:break-word;"><div style=3D"line-height:12px;height:1=
+2px;mso-line-height-alt:30px;" class=3D"height-30px line-height-30px">&nbsp=
+;</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"padding-0px-0px-0p=
+x-0px img-container" style=3D"font-size:0px;padding:0px 0px 0px 2px;word-br=
+eak:break-word;mso-padding-alt:0px 0px 0px 0px;text-align:left;"><div style=
+=3D"margin:0 auto 0 0;max-width:18%;" class=3D"max-width-90px"><img alt=3D"=
+Snap Inc." height=3D"auto" width=3D"90" src=3D"https://client-data.knak.io/=
+production/email_assets/657754d2cc4c9/versions/kAbTHizLzZRY1IBkzfoQ.png" st=
+yle=3D"border:none;outline:none;text-decoration:none;height:auto;width:100%=
+;font-size:13px;display:block;"></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class=3D"padding-10px-25px-=
+10px-5px text-container" style=3D"font-size:0px;padding:5px 25px 10px 5px;w=
+ord-break:break-word;mso-padding-alt:10px 25px 10px 5px;text-align:left;"><=
+div class=3D"links-0068A5-underline"><div style=3D"font-family:Avenir,Helve=
+tica,sans-serif,Arial;font-size:7px;letter-spacing:none;line-height:1.2;tex=
+t-align:left;mso-line-height-alt:0.875em;color:#9A9FA7;" class=3D"mso-font-=
+size-12px font-size-12px"><p style=3D"margin: 0 0;">&nbsp;Snap Inc., 3000 3=
+1st Street, Santa Monica, CA 90405</p></div></div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style=3D"font-size:0px;padd=
+ing:0 0 0 0;word-break:break-word;"><div style=3D"line-height:5px;height:5p=
+x;mso-line-height-alt:20px;" class=3D"height-20px line-height-20px">&nbsp;<=
+/div>
+                                            </td>
+                                        </tr>
+                                    </table></div><!--[if mso | IE]>
+                                </td>
+                                </tr>
+                                </table><![endif]-->
+                            </td>
+                        </tr>
+                    </table></div><!--[if mso | IE]>
+                </td>
+                </tr>
+                </table><![endif]-->
+            </td>
+        </tr>
+    </table><!--[if mso]>
+    </td>
+    </tr><![endif]-->
+    <!--[if mso]>
+    <tr>
+        <td><![endif]-->
+    <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"background-color:#FFFFFF;width:100%;" clas=
+s=3D"section">
+        <tr>
+            <td align=3D"center"><!--[if mso | IE]>
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"block-grid-outlook" style=3D"width:600px;" width=3D"=
+600" >
+                    <tr>
+                        <td style=3D"line-height:0px;font-size:0px;mso-line=
+-height-rule:exactly;"><![endif]--><div style=3D"background:#262626;backgro=
+und-color:#262626;Margin:0px auto;max-width:600px;">
+                    <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" role=3D"presentation" style=3D"background-color:#262626;w=
+idth:100%;">
+                        <tr>
+                            <td style=3D"font-size:0px;padding:0px;text-ali=
+gn:center;vertical-align:top;" class=3D"block-grid"><!--[if mso | IE]>
+                                <table role=3D"presentation" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0">
+                                    <tr>
+                                        <td style=3D"vertical-align:top;wid=
+th:600px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0;line-height:0;text-align:left;display:inline-block;=
+width:100%;direction:ltr;vertical-align:top;"><!--[if mso | IE]>
+                                    <table role=3D"presentation" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0">
+                                        <tr>
+                                            <td style=3D"vertical-align:top=
+;width:12px;" ><![endif]--><div class=3D"mj-column-per-2 mj-outlook-group-f=
+ix" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-blo=
+ck;vertical-align:top;width:2%;">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"border-radius:0px;verti=
+cal-align:top;" width=3D"100%">
+                                        </table></div><!--[if mso | IE]>
+                                    </td>
+                                    <td style=3D"vertical-align:top;width:1=
+26px;" ><![endif]--><div class=3D"mj-column-per-21 mj-outlook-group-fix" st=
+yle=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;ver=
+tical-align:top;width:21%;">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"border-radius:0px;verti=
+cal-align:top;" width=3D"100%">
+                                            <tr>
+                                                <td class=3D"padding-25px-0=
+px-0px-0px text-container" style=3D"font-size:0px;padding:15px 0px 0px 0px;=
+word-break:break-word;mso-padding-alt:25px 0px 0px 0px;text-align:left;"><d=
+iv class=3D"links-0068A5-underline"><div style=3D"font-family:Avenir,Helvet=
+ica,sans-serif,Arial;font-size:7px;letter-spacing:none;line-height:1;text-a=
+lign:left;mso-line-height-alt:0.75em;color:#9A9FA7;" class=3D"mso-font-size=
+-12px font-size-12px"><p style=3D"margin: 0 0;">=C2=A9
+                                                    2026 Snap Inc.</p><p st=
+yle=3D"margin: 0 0;">&nbsp;</p></div></div>
+                                                </td>
+                                            </tr>
+                                        </table></div><!--[if mso | IE]>
+                                    </td>
+                                    <td style=3D"vertical-align:top;width:2=
+70px;" ><![endif]--><div class=3D"mj-column-per-45 mj-outlook-group-fix" st=
+yle=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;ver=
+tical-align:top;width:45%;">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"border-radius:0px;verti=
+cal-align:top;" width=3D"100%">
+                                            <tr>
+                                                <td class=3D"padding-25px-0=
+px-0px-0px text-container" style=3D"font-size:0px;padding:15px 0px 0px 0px;=
+word-break:break-word;mso-padding-alt:25px 0px 0px 0px;text-align:center;">=
+<div class=3D"links-9A9FA7"><div style=3D"font-family:Avenir,Helvetica,sans=
+-serif,Arial;font-size:7px;letter-spacing:none;line-height:1;text-align:cen=
+ter;mso-line-height-alt:0.75em;color:#9A9FA7;" class=3D"mso-font-size-12px =
+font-size-12px"><p style=3D"margin: 0 0;"><a href=3D"https://values.snap.co=
+m/privacy/privacy-policy" target=3D"_blank" rel=3D"noopener" style=3D"color=
+: rgb(154, 159, 167); text-decoration: none;">&nbsp;Privacy Policy</a></p><=
+p style=3D"margin: 0 0;">&nbsp;</p></div></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style=3D"font-size:0px;=
+padding:0 0 0 0;word-break:break-word;"><div style=3D"line-height:10px;heig=
+ht:10px;mso-line-height-alt:15px;" class=3D"height-15px line-height-15px">&=
+nbsp;</div>
+                                                </td>
+                                            </tr>
+                                        </table></div><!--[if mso | IE]>
+                                    </td>
+                                    <td style=3D"vertical-align:top;width:1=
+80px;" ><![endif]--><div class=3D"mj-column-per-30 mj-outlook-group-fix" st=
+yle=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;ver=
+tical-align:top;width:30%;">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"border-radius:0px;verti=
+cal-align:top;" width=3D"100%">
+                                            <tr>
+                                                <td class=3D"padding-25px-0=
+px-0px-0px text-container" style=3D"font-size:0px;padding:15px 0px 0px 0px;=
+word-break:break-word;mso-padding-alt:25px 0px 0px 0px;text-align:center;">=
+<div class=3D"links-9A9FA7"><div style=3D"font-family:Avenir,Helvetica,sans=
+-serif,Arial;font-size:7px;letter-spacing:none;line-height:1;text-align:cen=
+ter;mso-line-height-alt:0.75em;color:#9A9FA7;" class=3D"mso-font-size-12px =
+font-size-12px"><p style=3D"margin: 0 0;"><a href=3D"https://snap.com/terms=
+" target=3D"_blank" rel=3D"noopener" style=3D"color: rgb(154, 159, 167); te=
+xt-decoration: none;">Terms of Service</a></p></div></div>
+                                                </td>
+                                            </tr>
+                                        </table></div><!--[if mso | IE]>
+                                    </td>
+                                    <td style=3D"vertical-align:top;width:1=
+2px;" ><![endif]--><div class=3D"mj-column-per-2 mj-outlook-group-fix" styl=
+e=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;verti=
+cal-align:top;width:2%;">
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"border-radius:0px;verti=
+cal-align:top;" width=3D"100%">
+                                        </table></div><!--[if mso | IE]>
+                                    </td>
+                                    </tr>
+                                    </table><![endif]--></div><!--[if mso |=
+ IE]>
+                                </td>
+                                </tr>
+                                </table><![endif]-->
+                            </td>
+                        </tr>
+                    </table></div><!--[if mso | IE]>
+                </td>
+                </tr>
+                </table><![endif]-->
+            </td>
+        </tr>
+    </table><!--[if mso]>
+    </td>
+    </tr><![endif]--><!--[if mso]>
+    </table><![endif]--></div>
+<img alt=3D"" src=3D"https://j3lbpcd9.r.us-east-1.awstrack.me/I0/010001a1b5=
+564bd7-2171cdce-2b01-4625-8b6c-09114586a8a5-000000/ozcVRo95ZSShFDdC4GG-l_3m=
+SdI=3D473" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>
